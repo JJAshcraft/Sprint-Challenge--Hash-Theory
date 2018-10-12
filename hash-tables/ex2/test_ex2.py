@@ -12,16 +12,16 @@ class Test(unittest.TestCase):
 
   def test_long_case(self):
     long_set = [
-      ('PIT', 'ORD'),
-      ('XNA', 'CID'),
-      ('SFO', 'BHM'),
-      ('FLG', 'XNA'),
-      (None, 'LAX'), 
-      ('LAX', 'SFO'),
-      ('CID', 'SLC'),
+      ('PIT', 'ORD'), #8
+      ('XNA', 'CID'), #5
+      ('SFO', 'BHM'), #2
+      ('FLG', 'XNA'), #4
+      (None, 'LAX'),  #0
+      ('LAX', 'SFO'), #1
+      ('CID', 'SLC'), #6
       ('ORD', None),
-      ('SLC', 'PIT'),
-      ('BHM', 'FLG'),
+      ('SLC', 'PIT'), #7
+      ('BHM', 'FLG'), #3
     ]
     self.assertEqual(reconstruct_trip(long_set), ['LAX', 'SFO', 'BHM', 'FLG', 'XNA', 'CID', 'SLC', 'PIT', 'ORD'])
 
