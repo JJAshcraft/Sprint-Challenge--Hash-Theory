@@ -28,7 +28,7 @@ class Test(unittest.TestCase):
   def test_incorrect_case(self):
     incorrect_set = [
       ('LHD', 'DAB'),
-      (None, 'HVN'),
+      (None, 'HVN'), #0
       ('MSO', 'SFO'),
       ('RDU', 'ABQ'),
       ('ACY', None),
