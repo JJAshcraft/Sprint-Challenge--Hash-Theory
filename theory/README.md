@@ -66,10 +66,13 @@ both `antelope` and `antelopes`.)
 
       ESC[12;45f
 
+answer: answer: (\\e)[0-9a-z]+;[0-9a-z]+
+
   moves the cursor to line 12, column 45.
 
       ESC[1m
 
+answer: /(\\e[)1m/
   changes the font to bold.
 
   * Come up with regexes for the two above sequences. The one to set the
@@ -78,7 +81,9 @@ both `antelope` and `antelopes`.)
     a single character which can be represented with `\e` in the regex.)
 
   * Draw a state machine diagram for a VT-100 that can consume regular
-    character sequences as well as the two above ESC sequences.
+    character sequences as well as the two above ESC sequences
+    
+  added Vt100_fsm.png
 
 > If you're curious, [here are all the VT-100 escape
 > sequences](http://ascii-table.com/ansi-escape-sequences-vt-100.php).
