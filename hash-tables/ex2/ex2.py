@@ -1,8 +1,15 @@
 def reconstruct_trip(tickets):
   ticket_table = {}
+  route = []
   for ticket in tickets:
     ticket_table[ticket[0]] = ticket[1]
+    if (ticket[0] == None):
+      route.append(ticket[1])
+    if (ticket[1] == None):
+      route.append(ticket[0])
   print(ticket_table)
+  print(route)
+  return route
 
 if __name__ == '__main__':
   # You can write code here to test your implementation using the Python repl
